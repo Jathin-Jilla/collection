@@ -1,0 +1,46 @@
+import java.util.*;
+public class collections {
+
+	public static void main(String[] args) {
+		LinkedList l=new LinkedList();
+		l.add(10);
+		l.add(20);
+		System.out.println(l);
+		l.addFirst(30);
+		l.addFirst(40);
+		System.out.println(l);
+		l.addLast(50);
+		System.out.println(l);
+		l.remove(4);
+		System.out.println(l);
+		for(int i=0;i<5;i++)
+		{
+			l.add(i);
+			l.addFirst(i);
+			l.addLast(i);
+		}
+		System.out.println(l);
+		System.out.println("Enumaration");
+		Enumeration e=Collections.enumeration(l);
+		while(e.hasMoreElements())
+		{
+			System.out.println(e.nextElement()+" ");
+		}
+		System.out.println("Output from Iterator");
+		Iterator al=l.iterator();
+		while(al.hasNext())
+		{
+			System.out.println(al.next()+" ");
+		}
+		System.out.println("Output from Iterator");
+		ListIterator all=l.listIterator();
+		while(all.hasNext())
+		{
+			System.out.println(all.next()+" "+"In Forward Direction");
+		}
+		while(all.hasPrevious())
+		{
+			System.out.println(all.previous()+" "+"In Backward Direction");
+		}
+	}
+}
